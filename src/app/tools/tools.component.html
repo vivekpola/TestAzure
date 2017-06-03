@@ -1,0 +1,188 @@
+<div class="col-lg-12" style="padding-right: 2%; padding-top: 2%">
+    <div class="jumbotron" style="padding: 2% 2%; border-radius: 10px">
+        <!--<h2>Tools</h2>-->
+        <ul class="nav nav-tabs" style="font-size: 150%">
+            <li class="active"><a data-toggle="tab" href="#vq_mon">VQ Monitoring</a></li>
+            <li><a data-toggle="tab" href="#auto_valid">Automated Validation</a></li>
+            <li><a data-toggle="tab" href="#other_tools">Other tools</a></li>
+            <li><a data-toggle="tab" href="#health_App">Health App</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="vq_mon" class="tab-pane fade in active">
+                <div class="row" style="font-size:100%; padding-top: 1%; padding-left: 1%">
+                    <h3>Video Quality (VQ) Monitoring Tools and Measurements</h3>
+
+                    <p>In the VQ Lab, our team uses the following tools and measurement techniques to evaluate the video quality
+                        of video streams end to end. Some of tools used are: </p>
+                    <table class="table" border="0" width="40%" style="width:40% !important">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li><b>Cheetah V-Factor</b></li>
+                                        <li><b>Tektronix Sentry</b></li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li><b>Tektronix MTS</b></li>
+                                        <li><b>IneoQuest Cricket</b></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>The tools analyze the video streams measuring the artifacts found. Measurements are: </p>
+                    <ul style="font-size:150%; padding-top: 1%; padding-left: 1%">
+                        <li><b>CONTOURING:</b> Contouring is a defect where abrupt changes between shades of the same color create
+                            color bands instead of a gradual change.</li>
+                        <li>
+                            <b>HALOING:</b> Haloing is typically seen around areas of high contrast, such as sharp lines,
+                            text edges, and graphics. On close inspection, part of the graphic appears to extend into the
+                            background.
+                        </li>
+
+                        <li>
+                            <b>MACROBLOCKING:</b> Macroblocking is a defect where the edges of blocks or rows of blocks,
+                            are typically seen as a grid-like-pattern. This defect often occurs during dissolves from one
+                            scene to another or during action scenes involving a great deal of complex movement.
+                        </li>
+                        <li>
+                            <b>NOISE:</b> Noise appears as random speckles on an otherwise smooth surface and can significantly
+                            degrade video quality.
+                        </li>
+                        <li>
+                            <b>SMEARING:</b> Smearing is a defect where part of the image remains fixed in space while the
+                            adjacent parts of the image moves leaving a trail.
+                        </li>
+                        <li>
+                            <b>PUMPING:</b> Pumping is a defect where the video or parts of the video appear to pulse at
+                            a regular interval.
+                        </li>
+                    </ul><br>
+
+                </div>
+            </div>
+            <div id="auto_valid" class="tab-pane fade">
+                <h3>VECTOR team performs Automated Regression testing in below areas</h3>
+                <div style="padding-top: 2%; font-size: 85%">
+                    <table border=1>
+                        <tr>
+                            <th>Areas</th>
+                            <th>Language/Framework</th>
+                            <th>Description</th>
+                            <th>Benefits</th>
+                        </tr>
+                        <tr *ngFor="let d of autovalid | async">
+                            <td>
+                                {{ d.Areas }}
+                            </td>
+                            <td>
+                                {{ d.Language_Or_Framework }}
+                            </td>
+                            <td>
+                                {{ d.Description }}
+                            </td>
+                            <td>
+                                {{ d.Benefits }}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="other_tools" class="tab-pane fade">
+                <h3>Support tools</h3>
+                <div style="padding-top: 2%; font-size: 85%">
+                    <table border=1>
+                        <tr>
+                            <th>Tool Name</th>
+                            <th>Language/Framework</th>
+                            <th>Description</th>
+                            <th>Benefits</th>
+                        </tr>
+                        <tr *ngFor="let d of toolother | async">
+                            <td>
+                                {{ d.Tool_Name }}
+                            </td>
+                            <td>
+                                {{ d.Language_Or_Framowork }}
+                            </td>
+                            <td>
+                                {{ d.Description }}
+                            </td>
+                            <td>
+                                {{ d.Benefits }}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="health_App" class="tab-pane fade">
+                <div class="row" style="font-size:100%; padding-top: 1%; padding-left: 1%">
+                    <h3>Mobile Health Application Documentation</h3>
+                    <div class="row col-lg-12">
+                        <div class="col-lg-4">
+                            <img src="./assets/images/Picture11.png" height="450" width="300">
+                        </div>
+                        <div class="col-lg-8">
+                            <h4>
+                                Displays current system status to user. The background color of hosts or services will reflect the most severe alarm. In
+                                this case, both are red since there is at least one critical/down alarm.
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row col-lg-12">
+                        <div class="col-lg-3">
+                            <img src="./assets/images/Picture12.png" height="450" width="240">
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="./assets/images/Picture13.png" height="450" width="240">
+                        </div>
+                        <div class="col-lg-5">
+                            <h4>The host and services lists contain all of the current alarms. These can be filtered based on
+                                alarm level, host or service name, and date/time range. Basic information is displayed in
+                                each cell. This information includes:
+                                <ul>
+                                    <li>Current Status</li>
+                                    <li>Acknowledgement</li>
+                                    <li>Comments</li>
+                                    <li>Time of last check</li>
+                                    <li>Host/Service names</li>
+                                    <li>Brief description</li>
+                                </ul>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row col-lg-12">
+                        <div class="col-lg-3">
+                            <img src="./assets/images/Picture14.png" height="450" width="240">
+                        </div>
+                        <div class="col-lg-3">
+                            <img src="./assets/images/Picture15.png" height="450" width="240">
+                        </div>
+                        <div class="col-lg-5">
+                            <h4>The details views contain all of the data from the cell as well as comments and a more detailed
+                                status message. From here, the details can be shared, acknowledged or commented.
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="row col-lg-12">
+                        <div class="col-lg-3">
+                            <img src="./assets/images/Picture16.png" height="450" width="240"></div>
+                        <div class="col-lg-3">
+                            <img src="./assets/images/Picture17.png" height="450" width="240"></div>
+                        <div class="col-lg-5">
+                            <h4>
+                                On the subscription views, alarms and hosts can be subscribed to. Based on this subscription, the user will receive the subscribed
+                                alarms when they are sent.
+
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</div>

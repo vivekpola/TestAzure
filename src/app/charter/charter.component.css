@@ -1,0 +1,18 @@
+table {
+	font-size: 150%;
+    border-collapse: collapse;
+    width: fit-content;
+	background: "./favicon.ico";
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #ffffff}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}

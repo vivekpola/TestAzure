@@ -1,0 +1,51 @@
+[
+    {
+        "Tool_Name": "RPC Simulator",
+        "Language_Or_Framowork": "Java, C++, Spring Framework",
+        "Description": "RPC SIM is an web application developed to send BOSS/BASS requests over RPC and parse the response received from the Controller or BST but also implements the exact TCP connection behavior of the Biller-DNCS/EC connections in both directions.",
+        "Benefits": "Reduce dependency on CSG for Validations.\nSupports transaction which are not easily reproducible e.g. Monthly PPV upload.\nSupports transaction which are rarely used by CSG e.g. Delete PPV event/service.\nSupports web Interface which make it.\nReusability",
+        "Display_Order": 1
+    },
+    {
+        "Tool_Name": "PCAP Parser",
+        "Language_Or_Framowork": "Java, JNetPcap API, Swing",
+        "Description": "PCAP parser is a Java based utility developed to parse pcap files to easily readable text files. Supports protocols such as Wirelink over TCP for Arris Headend Controller DAC and BOSS/BASS over RPC for Cisco Headend Controller DNCS.",
+        "Benefits": "Reduced Manual parsing effort from 3+ hour per transaction to 1 min.\nFor Arris BST capture, It also verifies that BST is transparent to communication and all four packets needed for a transaction exists i.e. BS2BST,BST2DAC,DAC2BST.\nUser doesn’t necessary need to know the specific details of BOSS or WIRELINK protocol.\nEnhanced troubleshooting as user can look at actual wire data and not limited to system logs.\nReusability.\nPortable.",
+        "Display_Order": 2
+    },
+    {
+        "Tool_Name": "BSGHandles_Validator\n",
+        "Language_Or_Framowork": "Java, RESP API",
+        "Description": "Automated sending Rest calls to ES web service to get BSG handles for 4000 rate codes with equipment type and compare validating with production UDB test data excel and updating the test results.",
+        "Benefits": "Reduced Manual validation effort from 1 week for 4000 rate codes to 2 hours.",
+        "Display_Order": 3
+    },
+    {
+        "Tool_Name": "AuthRefresh Validator",
+        "Language_Or_Framowork": "SOAP UI, Groovy",
+        "Description": "Automated sending BEP Refresh, Auth Request, PSP subs request and PSP Delete web service calls using groovy script and validating the response to check the respective account numbers got added successfully in the billing queue or not.",
+        "Benefits": "Reduced Manual validation effort from 1 week for 1000 account numbers to 1 minute.",
+        "Display_Order": 4
+    },
+    {
+        "Tool_Name": "RPC Filter",
+        "Language_Or_Framowork": "Java, Swing",
+        "Description": "Removing the duplicate requests and responses from parsed pcap text file and providing unique test data for making validation easier.",
+        "Benefits": "95% Manual effort saved.",
+        "Display_Order": 5
+    },
+    {
+        "Tool_Name": "Sentry Reporting Tool",
+        "Language_Or_Framowork": "Java, Swing, Jasper Reports, Selenium",
+        "Description": "Automated retrieving video quality data from devices configured in sentry UI using selenium, generating xml file and sending it to Jasper Reports for report creation. Developed Java based utility for execution and updating test results in ALM.",
+        "Benefits": "90% Manual effort Saved.\nFramework Reusability.\nAccurate Reporting.\nNo human error.",
+        "Display_Order": 6
+    },
+    {
+        "Tool_Name": "Cheetah Reporting Tool",
+        "Language_Or_Framowork": "Java, Swing, Jasper Reports, Selenium",
+        "Description": "Automated retrieving video quality data from channels configured in Cheetah UI using selenium, generating xml file and sending it to Jasper Reports for report creation. Developed Java based utility for execution and updating test results in ALM.",
+        "Benefits": "90% Manual effort Saved.\nReusability.\nAccurate Reporting.\nNo human error.",
+        "Display_Order": 7
+    }
+]

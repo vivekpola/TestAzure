@@ -1,0 +1,318 @@
+<div class="col-lg-12" style="padding-right: 2%; padding-top: 2%">
+    <div class="jumbotron" style="padding: 2% 2%; border-radius: 10px">
+        <!--<h2>Environments</h2>-->
+        <ul class="nav nav-tabs" style="font-size: 120%">
+            <li class="active"><a data-toggle="tab" href="#arris_con">Arris Controllers</a></li>
+            <li><a data-toggle="tab" href="#cisco_con">Cisco Controllers</a></li>
+            <li><a data-toggle="tab" href="#video_proc">Video Processors</a></li>
+            <li><a data-toggle="tab" href="#one_con">One Controller</a></li>
+            <li><a data-toggle="tab" href="#headend_dev">Headend Devices</a></li>
+            <li><a data-toggle="tab" href="#eas_sys">EAS Systems</a></li>
+            <li><a data-toggle="tab" href="#hospitality">Hospitality</a></li>
+            <li><a data-toggle="tab" href="#vespa">VESPA</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="arris_con" class="tab-pane fade in active">
+                <div style="padding-top: 2%; font-size: 85%">
+                    <table border=1>
+                        <tr>
+                            <th>Product/Device</th>
+                            <th>Version</th>
+                            <th>Location</th>
+
+                        </tr>
+                        <tr *ngFor="let d of data | async">
+                            <td>
+                                {{ d.Product_Or_Device }}
+                            </td>
+                            <td>
+                                {{ d.Version }}
+                            </td>
+                            <td>
+                                {{ d.Location }}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="cisco_con" class="tab-pane fade">
+                <h3>Cisco Controllers</h3>
+                     <div style="padding-top: 2%; font-size: 85%">
+                    <table border=1>
+                        <tr>
+                            <th>Headend</th>
+                            <th>AGI Adaptor</th>
+                            <th>DBDSUtils</th>
+                            <th>DTACS</th>
+                            <th>DTACS Informix</th>
+                            <th>DTACS RepDB</th>
+                            <th>EC</th>
+                            <th>EC Informix</th>
+                            <th>EC RepDB</th>
+                            <th>GQAM</th>
+                            <th>PCG</th>
+                            <th>QPSK Bridge</th>
+
+                        </tr>
+                        <tr *ngFor="let d of ciscocon | async">
+                            <td>
+                                {{ d.Headend }}
+                            </td>
+                            <td>
+                                {{ d.AGI_Adaptor }}
+                            </td>
+                            <td>
+                                {{ d.DBDSUtils }}
+                            </td>
+                            <td>
+                                {{ d.DTACS }}
+                            </td>
+                            <td>
+                                {{ d.DTACS_Informix}}
+                            </td>
+                            <td>
+                                {{ d.DTACS_RepDB }}
+                            </td>
+                            <td>
+                                {{ d.EC }}
+                            </td>
+                            <td>
+                                {{ d.EC_Informix }}
+                            </td>
+                            <td>
+                                {{ d.EC_RepDB }}
+                            </td>
+                            <td>
+                                {{ d.GQAM }}
+                            </td>
+                            <td>
+                                {{ d.PCG }}
+                            </td>
+                            <td>
+                                {{ d.QPSK_Bridge }}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <h3>ECS Versions</h3>
+                     <div style="padding-top: 2%; font-size: 85%">
+                    <table border=1>
+                        <tr>
+                            <th>ECS Name</th>
+                            <th>Admin</th>
+                            <th>BST</th>
+                            <th>Consul</th>
+                            <th>ECS</th>
+                            <th>VCS</th>
+                        </tr>
+                        <tr *ngFor="let d of ciscoconecs | async">
+                            <td>
+                                {{ d.ECS_Names }}
+                            </td>
+                            <td>
+                                {{ d.Admin }}
+                            </td>
+                            <td>
+                                {{ d.BST }}
+                            </td>
+                            <td>
+                                {{ d.Consul }}
+                            </td>
+                            <td>
+                                {{ d.ECS }}
+                            </td>
+                            <td>
+                                {{ d.VCS }}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+            <div id="video_proc" class="tab-pane fade">
+                    <div style="padding-top: 2%; font-size: 85%">
+                    <table border=1>
+                        <tr>
+                            <th>Device type/name</th>
+                            <th>Manufacture</th>
+                            <th>Category</th>
+                            <th>Build Version</th>
+                            <th>IP Address</th>
+                            <th>Environment</th>
+                            <th>Location</th>
+                        </tr>
+                        <tr *ngFor="let d of videoproc | async">
+                            <td>
+                                {{ d.DeviceType_Or_Name }}
+                            </td>
+                            <td>
+                                {{ d.Manufacturer }}
+                            </td>
+                            <td>
+                                {{ d.Category }}
+                            </td>
+                            <td>
+                                {{ d.Build_Version }}
+                            </td>
+                            <td>
+                                {{ d.IP_Address }}
+                            </td>
+                            <td>
+                                {{ d.Environment }}
+                            </td>
+                             <td>
+                                {{ d.Location }}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="one_con" class="tab-pane fade">
+                <div style="padding-top: 2%; font-size: 85%">
+                    <table border=1>
+                        <tr>
+                            <th>Product</th>
+                            <th>Version</th>
+                            <th>Location</th>
+                        </tr>
+                        <tr *ngFor="let d of onecon | async">
+                            <td>
+                                {{ d.Product }}
+                            </td>
+                            <td>
+                                {{ d.Version }}
+                            </td>
+                             <td>
+                                {{ d.Location }}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="headend_dev" class="tab-pane fade">
+              <div style="padding-top: 2%; font-size: 85%">
+                    <table border=1>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Version</th>
+                            
+                        </tr>
+                        <tr *ngFor="let d of headenddev | async">
+                            <td>
+                                {{ d.Name }}
+                            </td>
+                            <td>
+                                {{ d.Type }}
+                            </td>
+                             <td>
+                                {{ d.Version }}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="eas_sys" class="tab-pane fade">
+                <div style="padding-top: 2%; font-size: 85%">
+                    <table border=1>
+                        <tr>
+                            <th>Systems</th>
+                            <th>Version</th>
+                            <th>Location</th>
+                        </tr>
+                        <tr *ngFor="let d of eassystem | async">
+                            <td>
+                                {{ d.Systems }}
+                            </td>
+                            <td>
+                                {{ d.Version }}
+                            </td>
+                             <td>
+                                {{ d.Location }}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="hospitality" class="tab-pane fade">
+                <div style="padding-top: 2%; font-size: 85%">
+                    <table border=1>
+                        <tr>
+                            <th>Device</th>
+                            <th>Version</th>
+                            <th>Location</th>
+                        </tr>
+                        <tr *ngFor="let d of hospitalitydev | async">
+                            <td>
+                                {{ d.Device }}
+                            </td>
+                            <td>
+                                {{ d.Version }}
+                            </td>
+                             <td>
+                                {{ d.Location }}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="vespa" class="tab-pane fade" style="padding-top: 2%;">
+                <h3>Video and eTV Services Platform</h3>
+                <div style="padding-top: 2%; font-size: 85%">
+                    <table border=1>
+                        <tr>
+                            <th>Hostname</th>
+                            <th>IP</th>
+                            <th>VIP</th>
+                            <th>Server(to be install)</th>
+                        </tr>
+                        <tr *ngFor="let d of vespaplatform | async">
+                            <td>
+                                {{ d.Hostname }}
+                            </td>
+                            <td>
+                                {{ d.IP }}
+                            </td>
+                             <td>
+                                {{ d.VIP }}
+                            </td>
+                            <td>
+                                {{ d.Server }}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                 <h3>Code installed on this machines are:</h3>
+                <div style="padding-top: 2%; font-size: 85%">
+                    <table border=1>
+                        <tr>
+                            <th>Component</th>
+                            <th>Version</th>
+                            <th>Repo Location</th>
+                        </tr>
+                        <tr *ngFor="let d of vespacode | async">
+                            <td>
+                                {{ d.Component }}
+                            </td>
+                            <td>
+                                {{ d.Version }}
+                            </td>
+                             <td>
+                                {{ d.Repo_Location }}
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

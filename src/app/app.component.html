@@ -1,3 +1,117 @@
-<h1>
-  {{title}}
-</h1>
+<ng-sidebar-container>
+    <ng-sidebar [(opened)]="_opened" [mode]="_MODES[_modeNum]" [autoFocus]="false">
+        <div class="sidebar-nav" style="background: #42444E; height: 100%; box-shadow: inset -10px 0 5px -3px hsla(0,0%,0%,.25)">
+            <ul class="nav" id="side-menu" style=" width: 180px; font-size: 100%">
+                <li style="text-align: center; font-size: 700%; color: #ddd">
+                    <i class="fa fa-user fa-fw"></i>
+                </li>
+
+                <i class="fa fa-arrow-left fa-fw" (click)="_toggleOpened()" style="font-size: 120%; cursor: pointer; color: white; padding-left: 90%"></i>
+                <hr class="style-six">
+                <li (click)="toggleHighlight(1)" [ngClass]="{'active-1': highlightedDiv === 1}">
+                    <a routerLink="/home" routerLinkActive="active"><i class="fa fa-home fa-fw"></i> Home</a>
+                </li>
+                <hr class="style-two">
+                <li (click)="toggleHighlight(2)" [ngClass]="{'active-1': highlightedDiv === 2}">
+                    <a routerLink="/projects" routerLinkActive="active"><i class="fa fa-th-large fa-fw"></i> Projects</a>
+                </li>
+                <hr class="style-two">
+                <li (click)="toggleHighlight(3)" [ngClass]="{'active-1': highlightedDiv === 3}">
+                    <a routerLink="/charter" routerLinkActive="active"><i class="fa fa-bar-chart-o fa-fw"></i> Charter</a>
+                </li>
+                <hr class="style-two">
+                <li (click)="toggleHighlight(4)" [ngClass]="{'active-1': highlightedDiv === 4}">
+                    <a routerLink="/team" routerLinkActive="active"><i class="fa fa-group fa-fw"></i> TEAM</a>
+                </li>
+                <hr class="style-two">
+                <li (click)="toggleHighlight(5)" [ngClass]="{'active-1': highlightedDiv === 5}">
+                    <a routerLink="/environments" routerLinkActive="active"><i class="fa fa-cubes fa-fw"></i> Environment</a>
+                </li>
+                <hr class="style-two">
+                <li (click)="toggleHighlight(6)" [ngClass]="{'active-1': highlightedDiv === 6}">
+                    <a routerLink="/tools" routerLinkActive="active"><i class="fa fa-wrench fa-fw"></i> Tools</a>
+                </li>
+                <ul class="nav" id="side-menu" style=" font-size: 95%; margin-left: 10%">
+                    <li (click)="toggleHighlight(7)" [ngClass]="{'active-1': highlightedDiv === 7}">
+                        <a routerLink="/security-check" routerLinkActive="active"><i class="fa fa-dashboard fa-fw"></i> Security scan</a>
+                    </li>
+
+                    <li (click)="toggleHighlight(8)" [ngClass]="{'active-1': highlightedDiv === 8}">
+                        <a routerLink="/reports" routerLinkActive="active"><i class="fa fa-tasks fa-fw"></i> Reports</a>
+                    </li>
+                </ul>
+                <hr class="style-two">
+                <!--<li>
+                    <a><i class="fa fa-flag-checkered fa-fw"></i> Goals</a>
+                </li>
+                <ul class="nav" id="side-menu" style=" font-size: 95%; margin-left: 10%">-->
+                <li (click)="toggleHighlight(9)" [ngClass]="{'active-1': highlightedDiv === 9}">
+                    <a routerLink="/goal-2016" routerLinkActive="active"><i class="fa fa-flag fa-fw"></i> Goal-2016</a>
+                </li>
+                <hr class="style-two">
+                <li (click)="toggleHighlight(10)" [ngClass]="{'active-1': highlightedDiv === 10}">
+                    <a routerLink="/goal-2017" routerLinkActive="active"><i class="fa fa-flag-checkered fa-fw"></i> Goal-2017</a>
+                </li>
+                <!--</ul>-->
+                <hr class="style-two">
+                <li (click)="toggleHighlight(11)" [ngClass]="{'active-1': highlightedDiv === 11}">
+                    <a routerLink="/documentation" routerLinkActive="active"><i class="fa fa-folder fa-fw"></i> Documentation</a>
+                </li>
+                <hr class="style-two">
+                <li (click)="toggleHighlight(12)" [ngClass]="{'active-1': highlightedDiv === 12}">
+                    <a routerLink="/important-dates" routerLinkActive="active"><i class="fa fa-calendar fa-fw"></i> Important Dates</a>
+                </li>
+                <hr class="style-two">
+                <li (click)="toggleHighlight(13)" [ngClass]="{'active-1': highlightedDiv === 13}">
+                    <a routerLink="/contact" routerLinkActive="active"><i class="fa fa-envelope fa-fw"></i> Contact</a>
+                </li>
+                <hr class="style-two">
+
+
+
+            </ul>
+        </div>
+    </ng-sidebar>
+    <header class="demo-header" style="font-size: 115%; cursor: hand">
+
+        <i class="fa fa-navicon fa-fw" (click)="_toggleOpened()" style="cursor: pointer"></i>
+        <!--<button (click)="_toggleOpened()" class="demo-header__toggle">Toggle sidebar</button>-->
+        <span style="padding-left: 1%">Vector Portal 2.0</span>
+        <div style="padding-left: 80%; font-size: 130%">
+            <div style="text-align: center; display: inline" onclick="window.open('https://tkts.sys.comcast.net/secure/CreateIssue!default.jspa','_blank')">
+                <!--<button type="button" style="font-size: 15px; color: #2677B6; padding: 3%; border-radius: 8px; box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)"><i class="fa fa-ticket fa-fw"></i> Open a Ticket</button>-->
+                <i class="fa fa-ticket fa-fw" style="cursor: pointer" tooltip content="Open a Ticket"></i>
+            </div>
+            <div style="text-align: center; display: inline">
+                <!--<button type="button" style="font-size: 15px; color: #2677B6; padding: 3%; border-radius: 8px; box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)"><i class="fa fa-sign-in fa-fw"></i> Sign in</button>-->
+                <i class="fa fa-sign-in fa-fw" style="cursor: pointer" tooltip content="Sign in"></i>
+            </div>
+        </div>
+    </header>
+
+    <div [hidden]="_opened1" class="icon-bar" style="float: left;width: 3.5%; font-size: 30%; box-shadow: 1em 1em 1em rgba(84, 85, 85, 0.5);">
+        <a (click)="toggleHighlight(1)" [ngClass]="{'active-1': highlightedDiv === 1}" routerLink="/home" routerLinkActive="active"><i class="fa fa-home" tooltip content="Home"></i></a>
+        <a (click)="toggleHighlight(2)" [ngClass]="{'active-1': highlightedDiv === 2}" routerLink="/projects" routerLinkActive="active"><i class="fa fa-th-large fa-fw" tooltip content="Projects"></i></a>
+        <a (click)="toggleHighlight(3)" [ngClass]="{'active-1': highlightedDiv === 3}" routerLink="/charter" routerLinkActive="active"><i class="fa fa-bar-chart-o fa-fw" tooltip content="Charter"></i></a>
+        <a (click)="toggleHighlight(4)" [ngClass]="{'active-1': highlightedDiv === 4}" routerLink="/team" routerLinkActive="active"><i class="fa fa-group fa-fw" tooltip content="Team"></i></a>
+        <a (click)="toggleHighlight(5)" [ngClass]="{'active-1': highlightedDiv === 5}" routerLink="/environments" routerLinkActive="active"><i class="fa fa-cubes fa-fw" tooltip content="Environment"></i></a>
+        <a (click)="toggleHighlight(6)" [ngClass]="{'active-1': highlightedDiv === 6}" routerLink="/tools" routerLinkActive="active"><i class="fa fa-wrench fa-fw" tooltip content="Tools"></i></a>
+        <a (click)="toggleHighlight(7)" [ngClass]="{'active-1': highlightedDiv === 7}" routerLink="/security-check" routerLinkActive="active"><i class="fa fa-dashboard fa-fw" tooltip content="Security-scan"></i></a>
+        <a (click)="toggleHighlight(8)" [ngClass]="{'active-1': highlightedDiv === 8}" routerLink="/reports" routerLinkActive="active"><i class="fa fa-tasks fa-fw" tooltip content="Reports"></i></a>
+        <a (click)="toggleHighlight(9)" [ngClass]="{'active-1': highlightedDiv === 9}" routerLink="/goal-2016" routerLinkActive="active"><i class="fa fa-flag fa-fw" tooltip content="Goal-2016"></i></a>
+        <a (click)="toggleHighlight(10)" [ngClass]="{'active-1': highlightedDiv === 10}" routerLink="/goal-2017" routerLinkActive="active"><i class="fa fa-flag-checkered fa-fw" tooltip content="Goal-2017"></i></a>
+        <a (click)="toggleHighlight(11)" [ngClass]="{'active-1': highlightedDiv === 11}" routerLink="/documentation" routerLinkActive="active"><i class="fa fa-folder fa-fw" tooltip content="Documentation"></i></a>
+        <a (click)="toggleHighlight(12)" [ngClass]="{'active-1': highlightedDiv === 12}" routerLink="/important-dates" routerLinkActive="active"><i class="fa fa-calendar fa-fw" tooltip content="Important dates"></i></a>
+        <a (click)="toggleHighlight(13)" [ngClass]="{'active-1': highlightedDiv === 13}" routerLink="/contact" routerLinkActive="active"><i class="fa fa-envelope fa-fw" tooltip content="Contact"></i></a>
+    </div>
+    <div style="float: right; width:96.5%">
+
+        <router-outlet>
+
+        </router-outlet>
+    </div>
+    <div style="clear:both"></div>
+
+
+
+</ng-sidebar-container>

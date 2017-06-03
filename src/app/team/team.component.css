@@ -1,0 +1,41 @@
+    .profile-box {
+        height: 200px;
+        width: 200px;
+        background-color: #eeeeee;
+        border-color: #e7e7e7;
+        padding: 10px 0px 15px 15px;
+        border-radius: 8px;
+        /*box-shadow: 0px 7px 15px 0px #888888;*/
+        margin-bottom: 25px;
+        cursor: pointer;
+    }
+
+    .circluar-image {
+        width: 100px;
+        height: 100px;
+        border: 4px solid #fff;
+        border-radius: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    .span {
+        text-align: center;
+    }
+
+    .jumbotron {
+        font-size: 16px;
+        padding-top: unset;
+        padding-bottom: unset;
+        padding: 5px;
+        margin-bottom: unset;
+        line-height: 1.5;
+    }
+
+    .form-inline .form-group {
+        display: block;
+    }

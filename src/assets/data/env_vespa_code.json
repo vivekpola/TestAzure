@@ -1,0 +1,98 @@
+[
+    {
+        "Component": "cpt-automation.noarch",
+        "Version": "1.0.168-1",
+        "Repo_Location": "nexus_ephemeral_releases",
+        "Display_Order": 1
+    },
+    {
+        "Component": "cpt-hiera-rpm.noarch    ",
+        "Version": "1.0.387-1            ",
+        "Repo_Location": "installed",
+        "Display_Order": 2
+    },
+    {
+        "Component": "cvs-2wc.i386            ",
+        "Version": "3.0.14-1             ",
+        "Repo_Location": "nexus_ephemeral_releases",
+        "Display_Order": 3
+    },
+    {
+        "Component": "cvs-activesentry.i386   ",
+        "Version": "3.0.7-1              ",
+        "Repo_Location": "nexus_ephemeral_releases",
+        "Display_Order": 4
+    },
+    {
+        "Component": "cvs-amr.i386            ",
+        "Version": "3.0.10-1             ",
+        "Repo_Location": "nexus_ephemeral_releases",
+        "Display_Order": 5
+    },
+    {
+        "Component": "cvs-compact.i386        ",
+        "Version": "3.0.15-1             ",
+        "Repo_Location": "nexus_ephemeral_releases",
+        "Display_Order": 6
+    },
+    {
+        "Component": "cvs-dms-logging.i386     ",
+        "Version": "3.0.14-1             ",
+        "Repo_Location": "nexus_ephemeral_releases",
+        "Display_Order": 7
+    },
+    {
+        "Component": "cvs-gcdb-local.i386     ",
+        "Version": "3.0.5-1              ",
+        "Repo_Location": "nexus_ephemeral_releases",
+        "Display_Order": 8
+    },
+    {
+        "Component": "cvs-server-config.i386  ",
+        "Version": "3.0.11-1             ",
+        "Repo_Location": "nexus_ephemeral_releases",
+        "Display_Order": 9
+    },
+    {
+        "Component": "cvs-stm.i386            ",
+        "Version": "3.0.14-1             ",
+        "Repo_Location": "nexus_ephemeral_releases",
+        "Display_Order": 10
+    },
+    {
+        "Component": "libedit.x86_64          ",
+        "Version": "3.0-12.20121213cvs.el7",
+        "Repo_Location": "anaconda",
+        "Display_Order": 11
+    },
+    {
+        "Component": "ruby-augeas.x86_64      ",
+        "Version": "0.5.0-1.el7          ",
+        "Repo_Location": "atlas-cpt-3rdparty",
+        "Display_Order": 12
+    },
+    {
+        "Component": "ruby-shadow.x86_64      ",
+        "Version": "1.4.1-23.el7         ",
+        "Repo_Location": "atlas-cpt-3rdparty",
+        "Display_Order": 13
+    },
+    {
+        "Component": "rubygem-deep_merge.noarch",
+        "Version": "1.0.1-5.el7          ",
+        "Repo_Location": "atlas-cpt-3rdparty",
+        "Display_Order": 14
+    },
+    {
+        "Component": "tvp_java_kit.noarch     ",
+        "Version": "3.0.6-1              ",
+        "Repo_Location": "nexus_ephemeral_releases",
+        "Display_Order": 15
+    },
+    {
+        "Component": "tvp_postgresql.noarch   ",
+        "Version": "3.0.11-1             ",
+        "Repo_Location": "nexus_ephemeral_releases",
+        "Display_Order": 16
+    }
+]
