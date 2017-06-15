@@ -16,6 +16,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { ImportantDatesComponent } from './important-dates/important-dates.component';
 import { Goal2016Component } from './goal-2016/goal-2016.component';
 import { Goal2017Component } from './goal-2017/goal-2017.component';
+import { SigninComponent } from './signin/signin.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
   { path: 'tools', component: ToolsComponent },
   { path: 'goal-2016', component: Goal2016Component },
   { path: 'goal-2017', component: Goal2017Component },
+  { path: 'signin', component: SigninComponent },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
   // { path: '**', redirectTo: '/home',  pathMatch: 'full' }
 ];

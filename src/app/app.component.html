@@ -72,11 +72,11 @@
             </ul>
         </div>
     </ng-sidebar>
-    <header class="demo-header" style="font-size: 115%; cursor: hand">
+    <header class="demo-header" style="font-size: 115%; cursor: hand; padding-top: 1%">
 
         <i class="fa fa-navicon fa-fw" (click)="_toggleOpened()" style="cursor: pointer"></i>
         <!--<button (click)="_toggleOpened()" class="demo-header__toggle">Toggle sidebar</button>-->
-        <span style="padding-left: 1%">Vector Portal 2.0</span>
+        <span style="padding-left: 1%; font-family: Audiowide; font-size: 180%; color: #cccccc">VECTOR</span>
         <div style="padding-left: 80%; font-size: 130%">
             <div style="text-align: center; display: inline" onclick="window.open('https://tkts.sys.comcast.net/secure/CreateIssue!default.jspa','_blank')">
                 <!--<button type="button" style="font-size: 15px; color: #2677B6; padding: 3%; border-radius: 8px; box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)"><i class="fa fa-ticket fa-fw"></i> Open a Ticket</button>-->
@@ -84,7 +84,7 @@
             </div>
             <div style="text-align: center; display: inline">
                 <!--<button type="button" style="font-size: 15px; color: #2677B6; padding: 3%; border-radius: 8px; box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)"><i class="fa fa-sign-in fa-fw"></i> Sign in</button>-->
-                <i class="fa fa-sign-in fa-fw" style="cursor: pointer" tooltip content="Sign in"></i>
+                <a routerLink="/signin" routerLinkActive="active"><i class="fa fa-sign-in fa-fw" style="cursor: pointer" tooltip content="Sign in"></i></a>
             </div>
         </div>
     </header>

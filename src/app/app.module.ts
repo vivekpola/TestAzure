@@ -24,6 +24,7 @@ import { Goal2016Component } from './goal-2016/goal-2016.component';
 import { Goal2017Component } from './goal-2017/goal-2017.component';
 import {ToolTipModule} from 'angular2-tooltip'
 import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
     ImportantDatesComponent,
     HomeComponent,
     Goal2016Component,
-    Goal2017Component
+    Goal2017Component,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

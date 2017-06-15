@@ -10,8 +10,8 @@ export class EnvironmentsService {
     /*return this.http.request('./data/people.json')
         .map(res => res.json());*/
 
-       //return this.http.get('http://10.21.23.227:4202/charters')
-       return this.http.get('./assets/data/env_arris_con.json')
+       return this.http.get('http://10.21.23.221:4202/env_arris_con')
+       //return this.http.get('./assets/data/env_arris_con.json')
           // ...and calling .json() on the response to return data
           .map((res:Response) => res.json())
           //...errors if any
@@ -22,8 +22,8 @@ export class EnvironmentsService {
     /*return this.http.request('./data/people.json')
         .map(res => res.json());*/
 
-       //return this.http.get('http://10.21.23.227:4202/charters')
-       return this.http.get('./assets/data/env_cisco_con.json')
+       return this.http.get('http://10.21.23.221:4202/env_cisco_con')
+       //return this.http.get('./assets/data/env_cisco_con.json')
           // ...and calling .json() on the response to return data
           .map((res:Response) => res.json())
           //...errors if any
@@ -33,8 +33,8 @@ export class EnvironmentsService {
     /*return this.http.request('./data/people.json')
         .map(res => res.json());*/
 
-       //return this.http.get('http://10.21.23.227:4202/charters')
-       return this.http.get('./assets/data/env_cisco_con_ecs.json')
+       return this.http.get('http://10.21.23.221:4202/env_cisco_con_ecs')
+       //return this.http.get('./assets/data/env_cisco_con_ecs.json')
           // ...and calling .json() on the response to return data
           .map((res:Response) => res.json())
           //...errors if any
@@ -45,8 +45,8 @@ export class EnvironmentsService {
     /*return this.http.request('./data/people.json')
         .map(res => res.json());*/
 
-       //return this.http.get('http://10.21.23.227:4202/charters')
-       return this.http.get('./assets/data/env_video_process.json')
+       return this.http.get('http://10.21.23.221:4202/env_video_process')
+       //return this.http.get('./assets/data/env_video_process.json')
           // ...and calling .json() on the response to return data
           .map((res:Response) => res.json())
           //...errors if any
@@ -56,8 +56,8 @@ export class EnvironmentsService {
     /*return this.http.request('./data/people.json')
         .map(res => res.json());*/
 
-       //return this.http.get('http://10.21.23.227:4202/charters')
-       return this.http.get('./assets/data/enc_one_con.json')
+       return this.http.get('http://10.21.23.221:4202/env_one_con')
+       //return this.http.get('./assets/data/enc_one_con.json')
           // ...and calling .json() on the response to return data
           .map((res:Response) => res.json())
           //...errors if any
@@ -67,8 +67,8 @@ export class EnvironmentsService {
     /*return this.http.request('./data/people.json')
         .map(res => res.json());*/
 
-       //return this.http.get('http://10.21.23.227:4202/charters')
-       return this.http.get('./assets/data/env_headend_dev.json')
+       return this.http.get('http://10.21.23.221:4202/env_headend_dev')
+       //return this.http.get('./assets/data/env_headend_dev.json')
           // ...and calling .json() on the response to return data
           .map((res:Response) => res.json())
           //...errors if any
@@ -78,8 +78,8 @@ export class EnvironmentsService {
     /*return this.http.request('./data/people.json')
         .map(res => res.json());*/
 
-       //return this.http.get('http://10.21.23.227:4202/charters')
-       return this.http.get('./assets/data/enc_eas_sys.json')
+       return this.http.get('http://10.21.23.221:4202/env_eas_sys')
+       //return this.http.get('./assets/data/enc_eas_sys.json')
           // ...and calling .json() on the response to return data
           .map((res:Response) => res.json())
           //...errors if any
@@ -89,8 +89,8 @@ export class EnvironmentsService {
     /*return this.http.request('./data/people.json')
         .map(res => res.json());*/
 
-       //return this.http.get('http://10.21.23.227:4202/charters')
-       return this.http.get('./assets/data/env_hospitality_dev.json')
+       return this.http.get('http://10.21.23.221:4202/env_hospitality_dev')
+       //return this.http.get('./assets/data/env_hospitality_dev.json')
           // ...and calling .json() on the response to return data
           .map((res:Response) => res.json())
           //...errors if any
@@ -100,8 +100,8 @@ export class EnvironmentsService {
     /*return this.http.request('./data/people.json')
         .map(res => res.json());*/
 
-       //return this.http.get('http://10.21.23.227:4202/charters')
-       return this.http.get('./assets/data/env_vespa_code.json')
+       return this.http.get('http://10.21.23.221:4202/env_vespa_code')
+       //return this.http.get('./assets/data/env_vespa_code.json')
           // ...and calling .json() on the response to return data
           .map((res:Response) => res.json())
           //...errors if any
@@ -111,8 +111,8 @@ export class EnvironmentsService {
     /*return this.http.request('./data/people.json')
         .map(res => res.json());*/
 
-       //return this.http.get('http://10.21.23.227:4202/charters')
-       return this.http.get('./assets/data/env_vespa_platform.json')
+       return this.http.get('http://10.21.23.221:4202/env_vespa_platform')
+       //return this.http.get('./assets/data/env_vespa_platform.json')
           // ...and calling .json() on the response to return data
           .map((res:Response) => res.json())
           //...errors if any

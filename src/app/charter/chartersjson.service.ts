@@ -11,7 +11,7 @@ export class ChartersjsonService {
     /*return this.http.request('./data/people.json')
         .map(res => res.json());*/
 
-       return this.http.get('http://10.21.23.227:4202/charters')
+       return this.http.get('http://10.21.23.221:4202/charters')
        //return this.http.get('./assets/data/charters.json')
           // ...and calling .json() on the response to return data
           .map((res:Response) => res.json())
