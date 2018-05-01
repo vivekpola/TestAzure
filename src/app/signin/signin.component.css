@@ -1,19 +1,14 @@
-body {
-  background: #eee !important;
-}
+
 
 
 .form-signin {
-  max-width: 30%;
-  padding: 5% 5% 5%;
+  max-width: 20%;
+  padding: 1% 2% 1% 2%;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: rgba(84, 101, 169, 0.44);
   border-radius: 10px;
 }
-.form-signin .form-signin-heading,
-.form-signin .checkbox {
-  margin-bottom: 30px;
-}
+
 .form-signin .checkbox {
   font-weight: normal;
 }

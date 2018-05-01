@@ -1,261 +1,116 @@
-<div class="col-lg-12" style="padding-right: 2%; padding-top: 2%">
-    <div class="jumbotron" style="padding: 2% 2%;border-radius: 10px">
-        <b style="font-size:larger">Projects</b>
+<div style="padding-right: 2%; padding-top: 2%">
+      <div  style="padding: 2% 2%;border-radius: 10px">
+             <b style="font-size:larger" (click)="getNames()">Projects</b>
+            <select [(ngModel)]="selected" (ngModelChange)="onAssigneeChange($event)" name="Assignee">
+               <option *ngFor="let c of temp_data" [ngValue]="c"> {{c}} </option> 
+            </select>
+            <div style="display: block; padding-top: 2%">
+                  <div class="col-md-8">
+                        <canvas baseChart  [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
+                              [colors]="backgroundColor1"
+                              [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                  </div>
+                  <div class="col-md-4">
+                        <canvas baseChart  [datasets]="datasets_doughnut" [labels]="doughnutChartLabels" [chartType]="doughnutChartType"
+                              [colors] = 'backgroundColor2'
+                              (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+                  </div>
+            </div>
+      </div>
+</div>
+
+<div class="col-lg-12" style="padding-right: 2%;">
+      <div class="jumbotron" style="padding: 2% 2%;border-radius: 10px">
+            <div id="proj_con" class="tab-pane fade in active">
+                  <div style="font-size: 70%" *ngIf="fromTeam">
+                        <table border=1>
+                              <tr style="font-family: monospace">
+                                    <th style="width: 8%">Intake</th>
+                                    <th style="width: 69%">Summary</th>
+                                    <th style="width: 8%">Status</th>
+                                    <th style="width: 15%">Assignee</th>
+                                    <!--<th>Created</th>
+                        <th>Updated</th>-->
+
+                              </tr>
+                              <tr *ngFor="let d of data | async">
+                                    <td>
+                                          <a style="cursor: pointer;font-size: 90%;font-weight: bold" target="tab-pane" href="https://tkts.sys.comcast.net/browse/{{ d.key }}">
+                            {{ d.key }}
+                            </a>
+                                    </td>
+                                    <td>
+                                          {{ d.summary }}
+                                          <br>
+                                          <small>
+                             {{ d.description }}
+                            </small>
+                            <br>
+                                         <small style="color: darkblue; float: right">Last updated: {{ d.updated }}</small> 
+                                    </td>
+                                    <td>
+                                          {{ d.status }}
+                                    </td>
+                                    <td style="font-family: cursive">
+                                          {{ d.assignee }}
+                                    </td>
+                                    <!--<td>
+                            <time>
+                            {{ d.created }}
+                            </time>
+                        </td>
+                        <td>
+                            {{ d.updated }}
+                        </td>-->
+
+                              </tr>
+                        </table>
+                  </div>
+                  <div style="padding-top: 2%; font-size: 70%" *ngIf="fromPerson">
+                        <table border=1>
+                              <tr style="font-family: monospace">
+                                    <th style="width: 8%">Intake</th>
+                                    <th style="width: 69%">Summary</th>
+                                    <th style="width: 8%">Status</th>
+                                    <th style="width: 15%">Assignee</th>
+                                    <!--<th>Created</th>
+                        <th>Updated</th>-->
+
+                              </tr>
+                              <tr *ngFor="let d of dataFromPerson | async">
+                                    <td>
+                                          <a style="cursor: pointer;font-size: 90%;font-weight: bold" target="tab-pane" href="https://tkts.sys.comcast.net/browse/{{ d.key }}">
+                            {{ d.key }}
+                            </a>
+                                    </td>
+                                    <td>
+                                          {{ d.summary }}
+                                          <br>
+                                          <small>
+                             {{ d.description }}
+                            </small>
+                                    </td>
+                                    <td style="font-style: italic">
+                                          {{ d.status }}
+                                    </td>
+                                    <td style="font-family: cursive">
+                                          {{ d.assignee }}
+                                    </td>
+                                    <!--<td>
+                            <time>
+                            {{ d.created }}
+                            </time>
+                        </td>
+                        <td>
+                            {{ d.updated }}
+                        </td>-->
+
+                              </tr>
+                        </table>
+                  </div>
+            </div>
 
 
-        <table class="table" id="mainTable">
-            <thead>
-                <tr>
-                    <th>QAIntake</th>
-                    <th>Summary</th>
-                    <th>Status</th>
-                    <th>Assignee</th>
-                    <th>Created</th>
-                    <th>Updated</th>
-                </tr>
-            </thead>
-            <tbody style="cursor:pointer;color:#428bca;">
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-89', '_blank')" class="rowHover">
-                    <td>89</td>
-                    <td>OOSCleanUP </td>
-                    <td>In Progress</td>
-                    <td>Deepak Gurung</td>
-                    <td>2017-05-19</td>
-                    <td>2017-05-19</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-88', '_blank')" class="rowHover">
-                    <td>88</td>
-                    <td>possible 7.2.11 issue with TQ1035s HD2D?</td>
-                    <td>Open</td>
-                    <td>Alexei Saveliev</td>
-                    <td>2017-05-19</td>
-                    <td>2017-05-19</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-87', '_blank')" class="rowHover">
-                    <td>87</td>
-                    <td>Next Gen PES - Sprint 17.06.01</td>
-                    <td>In Progress</td>
-                    <td>Nishant Sirohi</td>
-                    <td>2017-05-19</td>
-                    <td>2017-05-19</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-86', '_blank')" class="rowHover">
-                    <td>86</td>
-                    <td>One Controller - Sprint S2017-11a</td>
-                    <td>In Progress</td>
-                    <td>Nishant Sirohi</td>
-                    <td>2017-05-19</td>
-                    <td>2017-05-19</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-82', '_blank')" class="rowHover">
-                    <td>82</td>
-                    <td>Ericsson X1 - Peg Channel Encoder Platform V.700.11(115)</td>
-                    <td>Accepted</td>
-                    <td>Robert Farrell</td>
-                    <td>2017-05-18</td>
-                    <td>2017-05-18</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-81', '_blank')" class="rowHover">
-                    <td>81</td>
-                    <td> Cisco NextX SR 8.0 Testing - May 2017 Drop</td>
-                    <td>Open</td>
-                    <td>George Smith</td>
-                    <td>2017-05-16</td>
-                    <td>2017-05-16</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-80', '_blank')" class="rowHover">
-                    <td>80</td>
-                    <td>RPhy setup and config with ATX Ucrypt</td>
-                    <td>Open</td>
-                    <td>Don Stecher</td>
-                    <td>2017-05-12</td>
-                    <td>2017-05-15</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-79', '_blank')" class="rowHover">
-                    <td>79</td>
-                    <td>Install WITBE Robot to support VQ User Experience</td>
-                    <td>Open</td>
-                    <td>Robert Kelly</td>
-                    <td>2017-05-10</td>
-                    <td>2017-05-10</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-78', '_blank')" class="rowHover">
-                    <td>78</td>
-                    <td>Perform Maintenance Operations on DAC 6000 (Full System Backup/Restore, db dump and restore)</td>
-                    <td>In Progress</td>
-                    <td>Vignesh Palanisamy</td>
-                    <td>2017-05-10</td>
-                    <td>2017-05-15</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-76', '_blank')" class="rowHover">
-                    <td>76</td>
-                    <td>Regression Test CASMR Service Manager R2B B1 and CASMR DTA R8C B1 </td>
-                    <td>In Progress</td>
-                    <td>Sampathkumar Kuppusamy</td>
-                    <td>2017-05-09</td>
-                    <td>2017-05-09</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-75', '_blank')" class="rowHover">
-                    <td>75</td>
-                    <td>VOD Testing with EC 8.0 Components</td>
-                    <td>Open</td>
-                    <td>Andrew Cannone</td>
-                    <td>2017-05-09</td>
-                    <td>2017-05-18</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-74', '_blank')" class="rowHover">
-                    <td>74</td>
-                    <td>Cisco Platform SR 8.0 - Legacy STB Do No Harm Testing</td>
-                    <td>Open</td>
-                    <td>George Smith</td>
-                    <td>2017-05-08</td>
-                    <td>2017-05-16</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-73', '_blank')" class="rowHover">
-                    <td>73</td>
-                    <td>Cisco Platform SR 8.0 - X1 Do No Harm Testing</td>
-                    <td>Open</td>
-                    <td>Heather Mozzone</td>
-                    <td>2017-05-08</td>
-                    <td>2017-05-17</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-72', '_blank')" class="rowHover">
-                    <td>72</td>
-                    <td>Cisco Platform SR 8.0 Hospitality Devices Testing</td>
-                    <td>Accepted</td>
-                    <td>Don Stecher</td>
-                    <td>2017-05-08</td>
-                    <td>2017-05-16</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-71', '_blank')" class="rowHover">
-                    <td>71</td>
-                    <td>Vector Portal 2.0</td>
-                    <td>In Progress</td>
-                    <td>Hiren Desai</td>
-                    <td>2017-05-05</td>
-                    <td>2017-05-16</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-68', '_blank')" class="rowHover">
-                    <td>68</td>
-                    <td>NC 1500 Firmware Release 4.0</td>
-                    <td>Accepted</td>
-                    <td>Atis Jurka</td>
-                    <td>2017-05-04</td>
-                    <td>2017-05-04</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-62', '_blank')" class="rowHover">
-                    <td>62</td>
-                    <td>Requesting access to Cornerstone</td>
-                    <td>Open</td>
-                    <td>Alexei Saveliev</td>
-                    <td>2017-04-21</td>
-                    <td>2017-04-21</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-57', '_blank')" class="rowHover">
-                    <td>57</td>
-                    <td>Next Gen VMP - Sprint 7</td>
-                    <td>In Progress</td>
-                    <td>Nishant Sirohi</td>
-                    <td>2017-04-21</td>
-                    <td>2017-05-05</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-56', '_blank')" class="rowHover">
-                    <td>56</td>
-                    <td>CAP Set up for DTA SI, EMM, Code, Guide Data Multicast Input</td>
-                    <td>Open</td>
-                    <td>Atis Jurka</td>
-                    <td>2017-04-21</td>
-                    <td>2017-04-26</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-53', '_blank')" class="rowHover">
-                    <td>53</td>
-                    <td>Monroe One-Net R189SE Version 3.1 - Special DTA Testing - Hospitality</td>
-                    <td>Open</td>
-                    <td>Don Stecher</td>
-                    <td>2017-04-11</td>
-                    <td>2017-05-09</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-52', '_blank')" class="rowHover">
-                    <td>52</td>
-                    <td>Test Harmonic NSG9000-40G 3.14.1.23 on all Hospitality devices</td>
-                    <td>Open</td>
-                    <td>Don Stecher</td>
-                    <td>2017-04-11</td>
-                    <td>2017-05-08</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-48', '_blank')" class="rowHover">
-                    <td>48</td>
-                    <td>Upgrade Juniper UER from 11.4R6.5 to12.3R12-S5 </td>
-                    <td>In Progress</td>
-                    <td>George Smith</td>
-                    <td>2017-04-04</td>
-                    <td>2017-05-12</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-39', '_blank')" class="rowHover">
-                    <td>39</td>
-                    <td>Sentry 9.6.19 Testing Required</td>
-                    <td>On Hold</td>
-                    <td>Robert Kelly</td>
-                    <td>2017-03-27</td>
-                    <td>2017-04-11</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-37', '_blank')" class="rowHover">
-                    <td>37</td>
-                    <td>Monroe One-Net R189SE Version 3.1 - Special DTA Testing</td>
-                    <td>In Progress</td>
-                    <td>David Reiff</td>
-                    <td>2017-03-24</td>
-                    <td>2017-05-09</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-34', '_blank')" class="rowHover">
-                    <td>34</td>
-                    <td>Configure Ucrypt for Marriott trial with new network config</td>
-                    <td>On Hold</td>
-                    <td>Don Stecher</td>
-                    <td>2017-03-17</td>
-                    <td>2017-04-04</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-23', '_blank')" class="rowHover">
-                    <td>23</td>
-                    <td>AGB 240 Firmware Release 1.2.6</td>
-                    <td>Open</td>
-                    <td>Robert Farrell</td>
-                    <td>2017-03-10</td>
-                    <td>2017-03-10</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-22', '_blank')" class="rowHover">
-                    <td>22</td>
-                    <td>CAP 1000 Defect Testing w/ version 4.1 Build 8</td>
-                    <td>In Progress</td>
-                    <td>David Reiff</td>
-                    <td>2017-03-08</td>
-                    <td>2017-03-08</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-20', '_blank')" class="rowHover">
-                    <td>20</td>
-                    <td>Security Scan request for 2wayconduits - ULA Environment</td>
-                    <td>Open</td>
-                    <td>Keith Houser</td>
-                    <td>2017-03-07</td>
-                    <td>2017-03-07</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-19', '_blank')" class="rowHover">
-                    <td>19</td>
-                    <td>Monroe One-Net R189SE Version 3.1</td>
-                    <td>In Progress</td>
-                    <td>David Reiff</td>
-                    <td>2017-03-07</td>
-                    <td>2017-05-09</td>
-                </tr>
-                <tr onclick="window.open('https://tkts.sys.comcast.net/browse/VECTOR-16', '_blank')" class="rowHover">
-                    <td>16</td>
-                    <td>Harmonic NSG9000-40G 3.14.1-23 SW with EdgeMS 1.11.2.329 Test Request</td>
-                    <td>On Hold</td>
-                    <td>George Smith</td>
-                    <td>2017-02-28</td>
-                    <td>2017-05-08</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+
+      </div>
 </div>

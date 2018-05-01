@@ -1,0 +1,113 @@
+:host /deep/ table {
+	font-size: 100%;
+    border-collapse: collapse;
+    width: 100%;
+	background: "./favicon.ico";
+}
+:host /deep/ td:first-child {
+    width: 5%;
+}
+:host /deep/ td:first-child+td {
+    width: 10%;
+}
+:host /deep/ td:first-child+td+td {
+    width: 10%;
+    text-align:left;
+}
+:host /deep/ td:first-child+td+td+td {
+    width: 27%;
+      text-align:left;
+}
+:host /deep/ td:first-child+td+td+td+td {
+    width: 27%;
+}
+:host /deep/ td:first-child+td+td+td+td+td {
+    width: 10%;
+}
+:host /deep/ td:first-child+td+td+td+td+td+td {
+    width: 8%;
+}
+:host /deep/ td:first-child+td+td+td+td+td+td+td {
+    width: 3%;
+}
+:host /deep/ .red {
+  background-color: #f44b4b;
+  font-size: 14px;
+}
+
+:host /deep/ .green {
+  background-color: #65e665;
+   font-size: 14px;
+}
+:host /deep/ .yellow {
+  background-color: yellow;
+   font-size: 14px;
+}
+
+:host /deep/ tr:nth-child(even){background-color: #ffffff}
+
+
+:host /deep/ body {
+                width: 1060px;
+                margin: 50px auto;
+            }
+
+            path {
+                stroke: #fff;
+            }
+
+            path:hover {
+                opacity: 0.9;
+            }
+
+            rect:hover {
+                fill: blue;
+            }
+
+            .axis {
+                font: 10px sans-serif;
+            }
+
+            .legend tr {
+                border-bottom: 1px solid grey;
+            }
+            .axis path,
+            .axis line {
+                fill: none;
+                stroke: #000;
+                
+            }
+
+            .x.axis path {
+                display: none;
+            }
+
+            .legend {
+                margin-bottom: 76px;
+                display: inline-block;
+                border-collapse: collapse;
+                border-spacing: 0px;
+            }
+
+            .legend td {
+                padding: 4px 5px;
+                vertical-align: bottom;
+            }
+
+            .legendFreq,
+            .legendPerc {
+               
+                width: 50px;
+            }
+              select {
+  font-family: Cursive;
+  font-size: 120%;
+}
+
+
+.orange
+{
+    color: #FF6D06;
+    font-family: tahoma;
+    font-size: 10pt;
+}

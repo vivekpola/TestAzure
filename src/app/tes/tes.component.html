@@ -1,0 +1,51 @@
+
+<div class="col-lg-12" style="padding-right: 2%; padding-top: 2%">
+  <div class="jumbotron" style="padding: 1% 2%;border-radius: 10px; text-align: center">  
+<div><h4 style="text-align: center">TES Ticket Project Priority</h4></div>
+<div class="clearfix"  *ngIf="([checkperson] == 'dstech200')||([checkperson] == 'vpolla001c')||([checkperson] == 'gville4424k')||([checkperson] == 'jjacob151')||([checkperson] == 'asavel00')||([checkperson] == 'dhille200')||([checkperson] == 'gsmith03')"> 
+<div>
+  <table id="customers" width="100%">
+    <tr style="background-color: lightgrey">
+      <td style="width: 5%"><b>PRIORITY</b></td>
+      <td style="width: 7%"><b>KEY</b></td>
+      <td style="width: 10%"><b>PROJECT</b></td>
+      <td style="width: 35%"><b>SUMMARY</b></td>
+      <td style="width: 10%"><b>CREATED</b></td>
+      <td style="width: 10%"><b>STATUS</b></td>
+      <td style="width: 8%"><b>SEVERITY</b></td>
+      <td style="width: 15%"><b>ASSIGNEE</b></td>
+    </tr>
+  </table>
+  </div>
+<div [sortablejs]="data2" [sortablejsOptions]="eventOptions">        
+  <table  *ngFor="let city of data2; let i = index" [attr.data-index]="i" [class.yellow]="i==1||i==2||i==3||i==4||i==5||i==6||i==7||i==8||i==9||i==0" id="customers" width="100%">
+    <tr><td style="width: 5%">{{i+1}}</td><td style="width: 7%"><a target='_blank' href="https://tkts.sys.comcast.net/browse/{{ city.key }}">{{ city.key }}</a></td><td style="width: 10%">{{ city.project }}</td><td style="width: 35%;text-align:left !important">{{ city.summary }}</td><td style="width: 10%">{{ city.created.substring(0,10) }}</td><td style="width: 10%">{{ city.status }}</td><td style="width: 8%">{{ city.severity }}</td><td style="width: 15%">{{ city.assignee }}</td>
+      </tr>
+  </table>
+
+</div>
+</div>
+  <div id="tabledata" *ngIf="([checkperson] != 'dstech200')&&([checkperson] != 'vpolla001c')&&([checkperson] != 'gville4424k')&&([checkperson] != 'jjacob151')&&([checkperson] != 'asavel00')&&([checkperson] != 'dhille200')&&([checkperson] != 'gsmith03')">
+                  <!--<input type="date" id="datepicker"/>-->
+                 <div>
+  <table id="customers" width="100%">
+    <tr style="background-color: lightgrey">
+     <td style="width: 5%"><b>PRIORITY</b></td>
+      <td style="width: 7%"><b>KEY</b></td>
+      <td style="width: 10%"><b>PROJECT</b></td>
+      <td style="width: 35%"><b>SUMMARY</b></td>
+      <td style="width: 10%"><b>CREATED</b></td>
+      <td style="width: 10%"><b>STATUS</b></td>
+      <td style="width: 8%"><b>SEVERITY</b></td>
+      <td style="width: 15%"><b>ASSIGNEE</b></td>
+    </tr>
+  </table>
+  </div>
+                  <table  *ngFor="let city of data2; let i = index" [attr.data-index]="i" id="customers"  [class.yellow]="i==1||i==2||i==3||i==4||i==5||i==6||i==7||i==8||i==9||i==0"  width="100%">
+    <tr><td style="width: 5%">{{i+1}}</td><td style="width: 7%"><a target='_blank' href="https://tkts.sys.comcast.net/browse/{{ city.key }}">{{ city.key }}</a></td><td style="width: 10%">{{ city.project }}</td><td style="width: 35%;text-align:left !important">{{ city.summary }}</td><td style="width: 10%">{{ city.created.substring(0,10) }}</td><td style="width: 10%">{{ city.status }}</td><td style="width: 8%">{{ city.severity }}</td><td style="width: 15%">{{ city.assignee }}</td>
+      </tr>
+  </table>
+</div> 
+
+  </div>
+</div>

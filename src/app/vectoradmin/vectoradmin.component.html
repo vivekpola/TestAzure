@@ -1,0 +1,105 @@
+<div class="col-lg-12" style="padding-right: 2%; padding-top: 2%">
+  <div class="jumbotron" style="padding: 2% 2%; border-radius: 10px">
+    <ul class="nav nav-tabs" style="font-size: 120%"  (click)="requestusersclick()">
+        
+      <li class="active"><a data-toggle="tab" href="#RequestedScans">Requested Scans</a></li>
+      <li><a data-toggle="tab" href="#UploadReport" >Upload Report</a></li>
+      <li><a data-toggle="tab" href="#UserManagement">User Management</a></li>
+    </ul>
+    
+    <div class="tab-content" style="font-size: 85%;padding: 1%">
+        
+      <div id="RequestedScans" class="tab-pane fade in active">
+        <div id="parent">
+          <div id="wide" class="jumbotron">
+              <div>
+                
+                  <table border=0>
+                      <tr style="height: 20pt">
+                          <th>User Name</th>
+                          <th>Version Name</th>
+                          <th>Device Name</th>
+                          <th>Device Type</th>
+                          <th>Interface IPs</th>                            
+
+                      </tr>
+                      <tr *ngFor="let d of schedulerreq | async">
+                          <td style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+                              {{ d.user_name }}                                 
+                          </td>
+                          <td >
+                              {{ d.version_name }}
+                          </td>                               
+                          <td>
+                              {{ d.device_name }}
+                          </td>
+                          <td>
+                              {{ d.device_type }}
+                          </td>
+                          <td>                                 
+                                <div  *ngFor="let f of interfacesv | async" >
+                                    <ul  *ngIf="f.version_id == d.version_id">  
+                                        <li>{{f.interface_ip}}</li>                                        
+                                    </ul>
+                              </div>
+                          </td>                                
+                      </tr>
+                  </table>
+              </div>
+          </div>
+          <div id="narrow" class="jumbotron" *ngIf="isSecondBoxOpen">
+            <table border=1>
+              <tr *ngFor="let d of replacedata | async">
+                <td>
+
+                  <button type="button" class="btn btn-warning" style="text-align: center; display: inline; margin-left: 1%; padding: 3pt; border: #cccccc;cursor: pointer; border-style: solid; color: #ffffff;border-radius: 30%"
+                    (click)="replace(d)">
+                      <b>Replace</b>
+                  </button>
+                </td>
+                <td style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+                  {{ d.product }},{{ d.version }},{{ d.model }},{{ d.controller }},{{ d.serial_number }}<br>
+                  <h5 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+                    {{ d.ip_address }}, {{ d.mac_address }}
+                  </h5>
+                </td>
+                <td style="font-family: Courier New, Courier, monospace;font-size: 90%">
+                  {{ d.scheduled_date }} <br> {{ d.start_time }} to {{ d.end_time }}
+                </td>
+
+                <td>
+                  <div [ngStyle]="{'background-image': 'url(https://www.comcastnow.com/profiletools/ProfilePicture.ashx?ID=CABLE_' + d.user_id + ')'}"
+                    id="circularlogo" class="circluar-image" style="background-size:50px 50px;background-repeat:no-repeat;"></div>
+                </td>
+
+
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+        <div id="UploadReport" class="tab-pane fade" >
+          <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".csv">
+
+        </div>
+        <div id="UserManagement" class="tab-pane fade">
+            
+          <div>
+            <ng2-smart-table [settings]="settings_usermanagement" [source]="data_usermanagement" style="font-size: 140%; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" (createConfirm)="onCreateConfirm($event)" (editConfirm)="onEditConfirm($event)" (deleteConfirm)="onDeleteConfirm($event)" (custom)="onCustom($event)"></ng2-smart-table>
+        </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <template #template1>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Modal</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        This is a modal.
+      </div>
+    </template>

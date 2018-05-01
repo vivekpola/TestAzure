@@ -1,12 +1,12 @@
 
 <div class="col-lg-12" style="padding-right: 2%; padding-top: 2%">
-    <div class="jumbotron" style="padding: 2% 2%; border-radius: 10px">
-        <article>
-            <h1><i class="fa fa-road fa-fw"></i>Security-scan coming soon!</h1>
-            <div>
-                <!--<p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>-->
-                <p>&mdash; The Team</p>
-            </div>
-        </article>
-    </div>
+    <div class="jumbotron" style="padding: 2% 2%;border-radius: 10px; text-align: center">
+            <b style="font-size:larger;color:#1e6bb8 ">VECTOR SECURITY SCANS</b><br> <br> <br>    
+            <div>       
+    <ng2-smart-table [settings]="settings" [source]= "source" (custom)="onCustom($event)" style="font-size:15px"></ng2-smart-table>
+
+                               </div>
+        </div>      
+                      
+
 </div>
