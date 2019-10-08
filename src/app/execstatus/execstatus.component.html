@@ -3,19 +3,27 @@
                 <div id="tabledata">
                         <!--<input type="date" id="datepicker"/>-->
                         <button class="btn btn-primary" id="addAll" (click)="addAllFiltered()">Add all</button>
+                        <button class="btn btn-primary" id="historytks" (click)="historytks()">History</button>
+                        <button class="btn btn-primary" id="currenttks" (click)="currenttks()">Current</button>
+                        <button class="btn btn-primary" id="refreshtkts" (click)="refreshtkts()"><i class="fa fa-refresh"></i></button>
+                       
                         <ng2-smart-table [settings]="settings" [source]="source" (editConfirm)="onEditConfirm($event)" (custom)="addtoMail($event)"
                                 (userRowSelect)="cmselection($event)" style="font-size:15px"></ng2-smart-table>
                 </div>
         </div>
         
 </div>
-<div style="padding:1%;position: fixed;float: right; right: 0%;margin-right: 1%;opacity: 0.8;background: darkslategray;overflow: scroll;max-height:400px;width: fit-content">
+<div style="padding:1%;position: fixed;float: right; right: 0%;margin-right: 1%;opacity: 0.8;background: darkslategray;overflow: scroll;max-height:400px;">
         <div  style="float: right; padding-right: 2%;">
-                <button class="btn btn-info" (click)="clicked()" style="color: black; size: 20%">Generate mail</button>
+                <button class="btn btn-primary" (click)="clicked()" style="color: white; size: 20%">Generate mail</button>
                 <li *ngFor="let hero of table_selected" style="margin-top: 5%">
                        <a style="color: white;cursor: pointer" tooltip content="{{ hero.summary }}"> {{ hero.intake }}</a> 
                         <a style="cursor: pointer;size: 110%;color: tomato" (click)="deleteFromMail(hero)"><i class="fa fa-minus fa-fw"></i></a>
                 </li>
         </div>
 
+</div>
+
+<div *ngIf="loading">
+       <img src="./assets/images/laoding.gif" style="padding:10%;position: fixed;float:right;right:40%;max-height:400px;"/>
 </div>

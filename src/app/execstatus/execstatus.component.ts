@@ -14,7 +14,11 @@ import { DatePipe } from '@angular/common';
 export class execstatusComponent implements OnInit {
   textFile;checkperson;checkpersonmail;
   source1: Observable<Array<any>>;
+  sourcecur: Observable<Array<any>>;
+  refreshtkt: Observable<Array<any>>;
+  sourcehis: Observable<Array<any>>;
   table_selected=[]; mailto;data4 = [];
+  loading: boolean = false;
   settings = {
     // selectMode: 'multi',
     pager: {
@@ -159,6 +163,32 @@ export class execstatusComponent implements OnInit {
         this.table_selected.push(this.source.getElements()["__zone_symbol__value"][i]);
     }
   }
+  currenttks(){
+     this.sourcecur = this.service.getEXEC();
+      this.sourcecur.subscribe(data => {
+      this.data4 = data;
+      this.source = new LocalDataSource(this.data4);
+    });
+  }
+  historytks(){
+     this.sourcehis = this.service.getHistEXEC();
+      this.sourcehis.subscribe(data => {
+      this.data4 = data;
+      this.source = new LocalDataSource(this.data4);
+    });
+  }
+  refreshtkts(){
+  console.log("refresh selected");
+   this.loading = true;
+  this.refreshtkt=this.service.getRefreshComments();
+  this.refreshtkt.subscribe(data => {
+      console.log(data);
+      this.loading = false;
+      location.reload();
+    });
+  console.log("refresh completed");
+  }
+
   onEditConfirm(event) {
     if (event.newData.blockers == null) { event.newData.blockers = ""; }
     if (event.newData.currentstatus == null) { event.newData.currentstatus = ""; }
@@ -213,7 +243,6 @@ export class execstatusComponent implements OnInit {
           console.log(aa);
           var array = [];
           if (aa != null) { array = aa.split(','); }
-          // console.log(array);
           for (let z = 0; z < array.length; z++) {
             blockersset = blockersset + "<a href='https://tkts.sys.comcast.net/browse/" + array[z] + "'>" + array[z] + "</a>&nbsp;&nbsp;";
             // console.log(blockersset);

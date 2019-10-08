@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SidebarModule } from 'ng-sidebar';
 import { tesComponent } from './tes/tes.component';
+import { execreportComponent } from './execreport/execreport.component';
 import { execstatusComponent } from './execstatus/execstatus.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { CharterComponent } from './charter/charter.component';
@@ -36,6 +37,7 @@ import { MyDateRangePickerModule } from 'mydaterangepicker';
 import { ModalModule } from 'ngx-bootstrap';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SortablejsModule } from 'angular-sortablejs';
+import { MyDatePickerModule } from 'mydatepicker';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { SortablejsModule } from 'angular-sortablejs';
     ProjectsComponent,
     CharterComponent,
     execstatusComponent,
+    execreportComponent,
     TeamComponent,
     tesComponent,
     EnvironmentsComponent,
@@ -63,6 +66,7 @@ import { SortablejsModule } from 'angular-sortablejs';
     VectoradminComponent
   ],
   imports: [
+    MyDatePickerModule,
     BrowserModule,
     FormsModule,
     SidebarModule.forRoot(),

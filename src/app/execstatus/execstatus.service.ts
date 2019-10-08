@@ -11,7 +11,20 @@ export class execstatusService {
      //   return this.http.get('./assets/data/projects.json')
           .map((res:Response) => res.json())
               .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
-  }   
+  } 
+    getHistEXEC(): Observable<any> {  
+    return this.http.get("http://10.21.23.221:4202/historyexecstatus")     
+     //   return this.http.get('./assets/data/projects.json')
+          .map((res:Response) => res.json())
+              .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+  }    
+
+getRefreshComments() {  
+      return this.http.get("http://10.21.23.221:4202/refreshComments")     
+     //   return this.http.get('./assets/data/projects.json')
+          .map((res:Response) => res.json())
+              .catch((error:any) => Observable.throw(error.json().error || 'Server error'));    
+  } 
 
     execmailpost(intake) {
     var headers = new Headers();
@@ -28,6 +41,7 @@ export class execstatusService {
 
     updatexecdetails(intake,currentstatus,monthlydate,RAG,blockers) {
     var headers = new Headers();
+    var execdate = new Date();
     var body = 'intake='+intake+'&currentstatus='+currentstatus+'&monthlydate='+monthlydate+'&RAG='+RAG+'&blockers='+blockers;
     console.log(JSON.stringify(body));
     headers.append('Content-Type', 'application/X-www-form-urlencoded');

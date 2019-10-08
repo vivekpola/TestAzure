@@ -74,6 +74,10 @@
                     <a routerLink="/tes" routerLinkActive="active"><i class="fa fa-flash fa-fw"></i>TES Project Priorities</a>
                 </li>
                 <hr class="style-two">
+               <li (click)="toggleHighlight(17)" [ngClass]="{'active-1': highlightedDiv === 17}">
+                   <a routerLink="/execreport" routerLinkActive="active"><i class="fa fa-flash fa-fw"></i>execreport</a>
+               </li>
+                <hr class="style-two">
                 <li (click)="toggleHighlight(13)" [ngClass]="{'active-1': highlightedDiv === 13}">
                     <a routerLink="/contact" routerLinkActive="active"><i class="fa fa-envelope fa-fw"></i> Contact</a>
                 </li>
@@ -121,6 +125,7 @@
         <a (click)="toggleHighlight(11)" [ngClass]="{'active-1': highlightedDiv === 11}" routerLink="/documentation" routerLinkActive="active"><i class="fa fa-folder fa-fw" tooltip content="Documentation"></i></a>
         <a (click)="toggleHighlight(12)" [ngClass]="{'active-1': highlightedDiv === 12}" routerLink="/important-dates" routerLinkActive="active"><i class="fa fa-calendar fa-fw" tooltip content="Important dates"></i></a>
        <a (click)="toggleHighlight(16)" [ngClass]="{'active-1': highlightedDiv === 16}" routerLink="/tes" routerLinkActive="active"><i class="fa fa-flash fa-fw" tooltip content="TES Tickets Project Priorities"></i></a>
+       <a (click)="toggleHighlight(17)" [ngClass]="{'active-1': highlightedDiv === 17}" routerLink="/execreport" routerLinkActive="active"><i class="fa fa-anchor fa-fw" tooltip content="exec reports"></i></a>
        <a (click)="toggleHighlight(13)" [ngClass]="{'active-1': highlightedDiv === 13}" routerLink="/contact" routerLinkActive="active"><i class="fa fa-envelope fa-fw" tooltip content="Contact"></i></a>
     </div>
     <div style="float: right; width:96.5%">

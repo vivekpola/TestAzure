@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { tesComponent } from './tes/tes.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { execstatusComponent } from './execstatus/execstatus.component';
+import { execreportComponent } from './execreport/execreport.component';
 import { CharterComponent } from './charter/charter.component';
 import { TeamComponent } from './team/team.component';
 import { EnvironmentsComponent } from './environments/environments.component';
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'charter', component: CharterComponent },
   { path: 'execstatus', component: execstatusComponent },
+  { path: 'execreport', component: execreportComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'tes', component: tesComponent },
   { path: 'environments', component: EnvironmentsComponent },
