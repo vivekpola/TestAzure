@@ -1,0 +1,30 @@
+[
+    {
+        "Hostname": "vector-2wc1a",
+        "IP": "10.255.170.148",
+        "VIP": "vector-2wc1vip – 10.255.170.150",
+        "Server": "Dell r710",
+        "Display_Order": 1
+    },
+    {
+        "Hostname": "vector-2wc1b",
+        "IP": "10.255.170.149",
+        "VIP": "vector-2wc1vip – 10.255.170.150",
+        "Server": "Dell r710",
+        "Display_Order": 2
+    },
+    {
+        "Hostname": "vector-2wc2a",
+        "IP": "10.255.170.151",
+        "VIP": "vector-2wc2vip – 10.255.170.153",
+        "Server": "Dell r710",
+        "Display_Order": 3
+    },
+    {
+        "Hostname": "vector-2wc2b",
+        "IP": "10.255.170.152",
+        "VIP": "vector-2wc2vip – 10.255.170.153",
+        "Server": "Dell r710",
+        "Display_Order": 4
+    }
+]

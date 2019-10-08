@@ -1,0 +1,20 @@
+[
+    {
+        "ECS_Names": "Legacy",
+        "Admin": "-",
+        "BST": "1.00.0.1",
+        "Consul": "-",
+        "ECS": "2.0-14",
+        "VCS": "-",
+        "Display_Order": 1
+    },
+    {
+        "ECS_Names": "NextX",
+        "Admin": "1.0.3",
+        "BST": "4.0.31",
+        "Consul": "0.7.0",
+        "ECS": "3.0.10",
+        "VCS": "4.0.14",
+        "Display_Order": 2
+    }
+]

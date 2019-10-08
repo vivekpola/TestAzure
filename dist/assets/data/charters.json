@@ -1,0 +1,147 @@
+[
+    {
+        "Workstream": "ULA",
+        "Platform": "Video Encoders/Receivers",
+        "Component": "1 - CAP 1000"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Video Encoders/Receivers",
+        "Component": "6 - Harmonic Encoders & MUXs"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Linear eQAMs",
+        "Component": "Q2IP"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Linear eQAMs",
+        "Component": "MDTA"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Linear eQAMs",
+        "Component": "Q2Q"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Linear eQAMs",
+        "Component": "RFGW1"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Linear eQAMs",
+        "Component": "GQAM"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Linear eQAMs",
+        "Component": "NSG/NSG Pro"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Linear eQAMs",
+        "Component": "SEM"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Linear eQAMs",
+        "Component": "Apex-1000"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Cisco",
+        "Component": "1 DNCS"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Cisco",
+        "Component": "3 EC's w/5 plants"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Cisco",
+        "Component": "2 ECSs"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Cisco",
+        "Component": "4 DTACS"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Cisco",
+        "Component": "1 BOA"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Arris ",
+        "Component": "2 VDPs"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Arris ",
+        "Component": "4 BSTs"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Arris ",
+        "Component": "1 DLG"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Arris ",
+        "Component": "1 CAST"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Arris ",
+        "Component": "4 CASMR controllers"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Arris ",
+        "Component": "7 plants"
+    },
+    {
+        "Workstream": "ULA",
+        "Platform": "Arris ",
+        "Component": "4 DACs"
+    },
+    {
+        "Workstream": "Production",
+        "Platform": "Linear eQAMs",
+        "Component": "GQAM"
+    },
+    {
+        "Workstream": "Production",
+        "Platform": "Linear eQAMs",
+        "Component": "NSG"
+    },
+    {
+        "Workstream": "Production",
+        "Platform": "Linear eQAMs",
+        "Component": "40G"
+    },
+    {
+        "Workstream": "Production",
+        "Platform": "Cisco",
+        "Component": "2 DTACS"
+    },
+    {
+        "Workstream": "Production",
+        "Platform": "Cisco",
+        "Component": "1 DAC w/2 Plants"
+    },
+    {
+        "Workstream": "Production",
+        "Platform": "Cisco",
+        "Component": "1 EC"
+    },
+    {
+        "Workstream": "Production",
+        "Platform": "Arris ",
+        "Component": "1 DAC w/1 Plant"
+    }
+]

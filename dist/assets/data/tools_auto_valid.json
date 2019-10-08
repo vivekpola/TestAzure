@@ -1,0 +1,44 @@
+[
+    {
+        "Areas": "DAC",
+        "Language_Or_Framework": "Unified Functional Testing, VB Script, Hybrid Framework",
+        "Description": "Automated sending UI parameters and test data as input in excel file and executing the test cases using driver script and updating the test results in ALM. Automated around 500 + Regression test cases.",
+        "Benefits": "90% Manual effort saved.\nFramework Reusability.",
+        "Display_Order": 1
+    },
+    {
+        "Areas": "One Controller VDP",
+        "Language_Or_Framework": "Java, Jenkins, TestNG, REST API, Selenium",
+        "Description": "Automated sending different action/state requests to STBs and DTAs through VDP using REST calls and validating the response codes, Server update, Kibana log validation, controller updates and updating test results in ALM.",
+        "Benefits": "90% Manual effort saved.\nScheduling test runs.\nGenerating and sending test reports through email automatically.",
+        "Display_Order": 2
+    },
+    {
+        "Areas": "One Controller BST",
+        "Language_Or_Framework": "Java, Jenkins, TestNG, REST API, Selenium",
+        "Description": "Automated sending 760 and other billing commands to STBs and DTAs from BSEM through BST using selenium and validating the response and updating the test results in ALM.",
+        "Benefits": "90% Manual effort saved.\nScheduling test runs.\nGenerating and sending test reports through email automatically.",
+        "Display_Order": 3
+    },
+    {
+        "Areas": "CASMR Terminal Management",
+        "Language_Or_Framework": "Java, TestNG, Maven, Sikuli, REST API, Image comparison API",
+        "Description": "Automated Terminal Management hits like Add, Delete, Clear pin etc., to DTAs through BSEM using Rest API and validating the response in CASMR UI using web service call and doing Diagnostic screen validation in DTAs using Image comparison API and updating the test results in ALM.",
+        "Benefits": "90% Manual effort Saved.\nReusability.",
+        "Display_Order": 4
+    },
+    {
+        "Areas": "Cisco Patch Automation",
+        "Language_Or_Framework": "Jenkins, Shell script",
+        "Description": "Automated scheduling patch installation on Cisco servers without any manual intervention.",
+        "Benefits": "95% Manual effort saved.\nNo Manual intervention required.\nReusability.  ",
+        "Display_Order": 4
+    },
+    {
+        "Areas": "User Experience",
+        "Language_Or_Framework": "Java, Maven, TestNG",
+        "Description": "Automated validating EAS Alerts, Closed captioning, PPV etc., on Boxes, Diagnostic screen validation and updating test results in ALM.\n",
+        "Benefits": "90% Manual effort Saved.",
+        "Display_Order": 5
+    }
+]

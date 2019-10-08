@@ -1,0 +1,42 @@
+[
+    {
+        "Product_Or_Device": "DAC 4",
+        "Version": "5.3 R2 D10 Build 50823",
+        "Location": "Downingtown,PA"
+    },
+    {
+        "Product_Or_Device": "DAC 17",
+        "Version": "5.3 R1 D21 Build 49234",
+        "Location": "Downingtown,PA"
+    },
+    {
+        "Product_Or_Device": "DAC 18",
+        "Version": "5.3 R1 D22 Build 49756",
+        "Location": "Downingtown,PA"
+    },
+    {
+        "Product_Or_Device": "DAC 25",
+        "Version": "5.3 R2 D10 Build 50823",
+        "Location": "Downingtown,PA"
+    },
+    {
+        "Product_Or_Device": "CASMR CORE",
+        "Version": "R9 Build 0",
+        "Location": "Downingtown,PA"
+    },
+    {
+        "Product_Or_Device": "Advisor",
+        "Version": "R3B Build 2",
+        "Location": "Downingtown,PA"
+    },
+    {
+        "Product_Or_Device": "CAST",
+        "Version": "R8A Build 0",
+        "Location": "Downingtown,PA"
+    },
+    {
+        "Product_Or_Device": "CSS",
+        "Version": "R5 Build 0",
+        "Location": "Downingtown,PA"
+    }
+]

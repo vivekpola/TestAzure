@@ -1,0 +1,32 @@
+[
+    {
+        "Product": "Arris BST",
+        "Version": "5.0.16",
+        "Location": "Downingtown,PA",
+        "Display_Order": 1
+    },
+    {
+        "Product": "Arris VDP",
+        "Version": "1.2.1 in field",
+        "Location": "Downingtown,PA",
+        "Display_Order": 2
+    },
+    {
+        "Product": "Arris VDP",
+        "Version": "1.2.3 - Under test",
+        "Location": "Downingtown,PA",
+        "Display_Order": 3
+    },
+    {
+        "Product": "Cisco BOA",
+        "Version": "3.6.0.11 baselined for trial",
+        "Location": "Downingtown,PA",
+        "Display_Order": 4
+    },
+    {
+        "Product": "Cisco BOA",
+        "Version": "4.0.31 - Under test",
+        "Location": "Downingtown,PA",
+        "Display_Order": 5
+    }
+]
