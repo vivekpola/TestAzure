@@ -44,7 +44,7 @@
     "npm": "^6.11.3",
     "rxjs": "^5.1.0",
     "sortablejs": "^1.7.0",
-    "underscore": "^1.8.3",
+    "underscore": "^1.12.1",
     "vanilla-modal": "^1.6.4",
     "@angular/cli": "1.0.3",
     "@angular/compiler-cli": "^4.0.0",
